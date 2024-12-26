@@ -1,8 +1,9 @@
+import MainRouter from "../routers/MainRouter"
 
 
 const MainLayout = () => {
   return (
-    <main>MainLayout</main>
+    <main><MainRouter /></main>
   )
 }
 
