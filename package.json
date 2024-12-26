@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "echo \"No tests specified\" && exit 0",
     "lint": "eslint . --fix",
+    "precommit": "lint-staged",
     "prepare": "husky install"
   },
   "husky": {
