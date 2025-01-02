@@ -1,6 +1,5 @@
-
 import { createGlobalStyle } from 'styled-components';
-// import 'modern-normalize';
+import 'modern-normalize';
 
 const ResetStyles = createGlobalStyle`
 body {
