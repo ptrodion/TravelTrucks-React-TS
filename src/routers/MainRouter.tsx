@@ -2,10 +2,11 @@ import { Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Vehicles from '../pages/Vehicles/Vehicles';
+import { Loader } from 'src/components/Loader/Loader';
 
 const MainRouter = () => {
   return (
-    <Suspense fallback={<div> Loading.....</div>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/vehicles" element={<Vehicles />} />
