@@ -6,7 +6,7 @@ import {
   TextWrapper,
 } from './Home.styled.jsx';
 
-export const Home = () => {
+const Home = () => {
   return (
     <section>
       <BackgroundImage>
@@ -22,3 +22,5 @@ export const Home = () => {
     </section>
   );
 };
+
+export default Home;
