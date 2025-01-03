@@ -1,8 +1,10 @@
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home/Home';
-import Vehicles from '../pages/Vehicles/Vehicles';
-import { Loader } from 'src/components/Loader/Loader';
+import { Loader } from '../components/Loader/Loader';
+
+const Home = lazy(() => import('../pages/Home/Home'));
+const Vehicles = lazy(() => import('../pages/Vehicles/Vehicles'));
+const Vehicle = lazy(() => import('../pages/Vehicle/Vehicle'));
 
 const MainRouter = () => {
   return (
@@ -10,7 +12,7 @@ const MainRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/vehicles" element={<Vehicles />} />
-        <Route path="/vehicles/:id" element={'Vehicles id Page'} />
+        <Route path="/vehicles/:id" element={<Vehicle />} />
         <Route path="/not-found" element={'Not Found'} />
         <Route path="*" element={<Navigate replace to="/not-found" />} />
       </Routes>
