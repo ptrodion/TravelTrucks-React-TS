@@ -11,8 +11,32 @@ export const BackgroundImageNotFound = styled.div`
   position: relative;
 `;
 
+export const WrapperGoBack = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  width: 100px;
+  border: 1px solid #8f6565;
+  background-color: #e3c7c7;
+  margin-bottom: 8px;
+`;
+
+export const WrapperGoBackList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  width: 234px;
+  border: 1px solid #8f6565;
+  background-color: #e3c7c7;
+`;
+
 export const WrapperNotFound = styled.div`
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.theme.gaps.s};
 `;
 
 export const TextMessage404 = styled.p`

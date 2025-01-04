@@ -2,8 +2,11 @@ import InnerButton from '../../components/Button/Button';
 import {
   BackgroundImageNotFound,
   TextMessage404,
+  WrapperGoBack,
+  WrapperGoBackList,
   WrapperNotFound,
 } from './NotFound.styled';
+import { IoMdArrowBack } from 'react-icons/io';
 
 const NotFound = () => {
   return (
@@ -13,14 +16,20 @@ const NotFound = () => {
           Oops! Something went wrong, this page does not exist
         </TextMessage404>
         <div>
-          <InnerButton
-            innerContent={'Go Back'}
-            onClick={() => window.history.back()}
-          />
-          <InnerButton
-            innerContent={'Back to the list of vehicles'}
-            onClick={() => (window.location.href = '/vehicles')}
-          />
+          <WrapperGoBack>
+            <IoMdArrowBack />
+            <InnerButton
+              innerContent={'Go Back'}
+              onClick={() => window.history.back()}
+            />
+          </WrapperGoBack>
+          <WrapperGoBackList>
+            <IoMdArrowBack />
+            <InnerButton
+              innerContent={'Back to the list of vehicles'}
+              onClick={() => (window.location.href = '/vehicles')}
+            />
+          </WrapperGoBackList>
         </div>
       </WrapperNotFound>
     </BackgroundImageNotFound>
