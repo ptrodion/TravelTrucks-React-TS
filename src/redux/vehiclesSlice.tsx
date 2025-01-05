@@ -1,7 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchVehicles } from './operations';
 
-const INITIAL_STATE = {
+interface Vehicle {
+  id: string;
+  name: string;
+}
+
+interface VehiclesState {
+  listOfVehicles: Vehicle[];
+  isLoading: boolean;
+  error: string | null;
+}
+
+const INITIAL_STATE: VehiclesState = {
   listOfVehicles: [],
   isLoading: false,
   error: null as string | null,

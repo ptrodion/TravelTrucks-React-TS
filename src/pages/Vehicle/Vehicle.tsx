@@ -1,5 +1,5 @@
 const Vehicle = () => {
-  return <section>Vehicle ID</section>;
+  return <section>Vehicles Page!</section>;
 };
 
 export default Vehicle;
